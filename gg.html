@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hilmy And Dasmit | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#0f172a);
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.profile{
+width:200px;
+height:200px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #38bdf8;
+box-shadow:0 0 40px #38bdf8;
+margin-bottom:25px;
+}
+
+h1{
+font-size:48px;
+background:linear-gradient(90deg,#38bdf8,#a78bfa);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.typing{
+margin-top:10px;
+font-size:20px;
+color:#cbd5f5;
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 10%;
+text-align:center;
+}
+
+.about h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+/* PROJECT */
+
+.projects{
+padding:80px 10%;
+}
+
+.projects h2{
+text-align:center;
+margin-bottom:40px;
+font-size:35px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+background:rgba(255,255,255,0.1);
+}
+
+.card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 10%;
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+background:#38bdf8;
+border-radius:25px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.contact a:hover{
+transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px;
+background:#020617;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<img src="https://files.catbox.moe/h7zm90.jpg" class="profile">
+
+<h1>Hilmy And Dasmit</h1>
+
+<p class="typing" id="typing"></p>
+
+</section>
+
+<section class="about">
+
+<h2>About Me</h2>
+
+<p>
+Halo, saya Hilmy And Dasmit. Website ini adalah portofolio pribadi
+untuk menampilkan karya, proyek, dan pengalaman yang pernah saya buat.
+</p>
+
+</section>
+
+<section class="projects">
+
+<h2>My Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Website Project</h3>
+<p>Membuat website modern menggunakan HTML dan CSS.</p>
+</div>
+
+<div class="card">
+<h3>UI Design</h3>
+<p>Mendesain tampilan aplikasi dengan gaya modern.</p>
+</div>
+
+<div class="card">
+<h3>Creative Project</h3>
+<p>Eksperimen teknologi dan inovasi digital.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact</h2>
+
+<a href="#">Instagram</a>
+<a href="#">Github</a>
+<a href="#">Email</a>
+
+</section>
+
+<footer>
+© 2026 Hilmy And Dasmit
+</footer>
+
+<script>
+
+const text = "Student • Creator • Future Innovator";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,70);
+}
+}
+
+typing();
+
+</script>
+
+</body>
+</html>
